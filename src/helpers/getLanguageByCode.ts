@@ -2,6 +2,8 @@ export const getLanguageName = (code: string) => {
     switch (code) {
         case 'en':
             return 'English';
+        case 'fa':
+            return 'پارسی';
         case 'ru':
             return 'Русский';
         case 'zh':
