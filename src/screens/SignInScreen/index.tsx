@@ -8,7 +8,8 @@ import { compose } from 'redux';
 import { IntlProps } from '../../';
 import { captchaLogin } from '../../api';
 import { Captcha, SignInComponent, TwoFactorAuth } from '../../components';
-import { EMAIL_REGEX, ERROR_EMPTY_PASSWORD, ERROR_INVALID_EMAIL, setDocumentTitle } from '../../helpers';
+// import { EMAIL_REGEX, ERROR_EMPTY_PASSWORD, ERROR_INVALID_EMAIL, setDocumentTitle } from '../../helpers';
+import {ERROR_EMPTY_PASSWORD, setDocumentTitle } from '../../helpers';
 import {
     Configs,
     GeetestCaptchaResponse,
@@ -262,11 +263,11 @@ class SignIn extends React.Component<Props, SignInState> {
 
     private validateForm = () => {
         const { email, password } = this.state;
-        const isEmailValid = email.match(EMAIL_REGEX);
 
-        if (!isEmailValid) {
+        // New validation using the translation key.
+        if (!email) {
             this.setState({
-                emailError: this.props.intl.formatMessage({ id: ERROR_INVALID_EMAIL }),
+                emailError: this.props.intl.formatMessage({ id: 'error.empty.nationalId' }),
                 passwordError: '',
             });
 

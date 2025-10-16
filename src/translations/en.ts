@@ -541,7 +541,7 @@ export const en = {
     'page.footer.faq': 'FAQ',
 
     'page.header.signIn': 'Sign In',
-    'page.header.signIn.email': 'Email',
+    'page.header.signIn.email': 'National ID Number',
     'page.header.signIn.password': 'Password',
     'page.header.signIn.password.message.error': 'Password is invalid',
     'page.header.signIn.receiveConfirmation': 'Didn\'t receive your confirmation email?',
@@ -700,6 +700,7 @@ export const en = {
     'error.invalid_request': 'Order - invalid request',
     'error.bad_request': 'Order - bad request',
     'error.request_entity_too_large': 'Order - request entity too large',
+    'error.empty.nationalId': 'National ID cannot be empty',
 
     // barong
     'resource.labels.private': 'Can\'t update label',

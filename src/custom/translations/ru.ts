@@ -40,6 +40,7 @@ export const ru: LangType = {
     'error.order.create.minPrice': 'Цена слишком мала. Минимальная цена: {price} {currency}',
     'error.order.create.maxPrice': 'Цена слишком велика. Максимальная цена: {price} {currency}',
     'error.order.create.available': 'Баланс превышен. Доступно {available} {currency}',
+    'error.empty.nationalId': 'Национальный ID не может быть пустым',
 
     'page.body.trade.header.marketDepths': 'Глубина рынка',
     'page.body.trade.header.marketDepths.content.price': 'Цена:',

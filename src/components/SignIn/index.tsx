@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 import { CustomInput } from '../';
 import { captchaLogin } from '../../api';
-import { EMAIL_REGEX } from '../../helpers';
+// import { EMAIL_REGEX } from '../../helpers';
 import { GeetestCaptchaResponse } from '../../modules';
 import { selectMobileDeviceState } from '../../modules/public/globalSettings';
 
@@ -79,9 +79,7 @@ const SignIn: React.FC<SignInProps> = ({
     const { formatMessage } = useIntl();
 
     const isValidForm = React.useCallback(() => {
-        const isEmailValid = email.match(EMAIL_REGEX);
-
-        return email && isEmailValid && password;
+        return email && password;
     }, [email, password]);
 
     const handleChangeEmail = React.useCallback(
@@ -198,7 +196,7 @@ const SignIn: React.FC<SignInProps> = ({
                             'cr-sign-in-form__group--focused': emailFocused,
                         })}>
                         <CustomInput
-                            type="email"
+                            type="text"
                             label={emailLabel || 'Email'}
                             placeholder={emailPlaceholder}
                             defaultLabel="Email"
@@ -233,7 +231,7 @@ const SignIn: React.FC<SignInProps> = ({
                         <Button
                             block={true}
                             type="button"
-                            disabled={isLoading || !email.match(EMAIL_REGEX) || !password || isButtonDisabled()}
+                            disabled={isLoading || !email || !password || isButtonDisabled()}
                             onClick={handleClick as any}
                             size="lg"
                             variant="primary">
