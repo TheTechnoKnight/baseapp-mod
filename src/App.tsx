@@ -1,5 +1,5 @@
 import { createBrowserHistory } from 'history';
-import * as React from 'react';
+import * as React from 'react'; // 1. IMPORT useEffect
 import * as ReactGA from 'react-ga';
 import { IntlProvider } from 'react-intl';
 import { useSelector } from 'react-redux';
@@ -75,6 +75,16 @@ export const App = () => {
     useSetMobileDevice();
     const lang = useSelector(selectCurrentLanguage);
     const isMobileDevice = useSelector(selectMobileDeviceState);
+
+    // 2. ADD THIS LOGIC BLOCK
+    React.useEffect(() => {
+        if (lang === 'fa') {
+            document.body.classList.add('persian-font');
+        } else {
+            document.body.classList.remove('persian-font');
+        }
+    }, [lang]);
+    // END OF NEW BLOCK
 
     return (
         <IntlProvider locale={lang} messages={getTranslations(lang, isMobileDevice)} key={lang}>

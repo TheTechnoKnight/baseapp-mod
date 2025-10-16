@@ -1,6 +1,20 @@
 @import "styles/style.pcss";
 @import "custom/styles/style.pcss";
 
+@font-face {
+  font-family: 'B Yekan';
+  /* This is an absolute path from the root of the website */
+  /* The leading '/' is very important */
+  src: url('/fonts/Yekan.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body.persian-font {
+  font-family: 'B Yekan', sans-serif !important;
+}
+
 :root {
   /* typography */
   --font-family: roboto, helvetica, sans-serif;
