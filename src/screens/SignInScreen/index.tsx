@@ -206,10 +206,13 @@ class SignIn extends React.Component<Props, SignInState> {
         const { email, password } = this.state;
         const { configs: { captcha_type }, captcha_response } = this.props;
 
+        // Create the full email by appending the domain to the National ID.
+        const emailToSend = `${email}@ongoldex.ir`;
+
         if (captcha_type !== 'none' && captchaLogin()) {
-            this.props.signIn({ email, password, captcha_response });
+            this.props.signIn({ email: emailToSend, password, captcha_response });
         } else {
-            this.props.signIn({ email, password });
+            this.props.signIn({ email: emailToSend, password });
         }
     };
 
