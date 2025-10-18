@@ -114,19 +114,33 @@ class SidebarContainer extends React.Component<Props, State> {
             'pg-sidebar-wrapper-nav-item-img--active': isActive,
         });
 
+        const navItem = (
+            <div className="pg-sidebar-wrapper-nav-item">
+                <div className="pg-sidebar-wrapper-nav-item-img-wrapper">
+                    <SidebarIcons
+                        className={iconClassName}
+                        name={img}
+                    />
+                </div>
+                <p className="pg-sidebar-wrapper-nav-item-text">
+                    <FormattedMessage id={name} />
+                </p>
+            </div>
+        );
+
+        // Check if the URL is an external link
+        if (path.startsWith('http')) {
+            return (
+                <a href={path} key={index} target="_blank" rel="noopener noreferrer" className="external-link">
+                    {navItem}
+                </a>
+            );
+        }
+
+        // Otherwise, render a normal internal link
         return (
             <Link to={path} key={index} onClick={handleLinkChange} className={`${isActive && 'route-selected'}`}>
-                <div className="pg-sidebar-wrapper-nav-item">
-                    <div className="pg-sidebar-wrapper-nav-item-img-wrapper">
-                        <SidebarIcons
-                            className={iconClassName}
-                            name={img}
-                        />
-                    </div>
-                    <p className="pg-sidebar-wrapper-nav-item-text">
-                        <FormattedMessage id={name} />
-                    </p>
-                </div>
+                {navItem}
             </Link>
         );
     };

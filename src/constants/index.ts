@@ -10,8 +10,8 @@ export const pgRoutes = (isLoggedIn: boolean, isLight?: boolean): string[][] => 
     ];
     const routesUnloggedIn = [
         ['page.header.navbar.signIn', '/signin', `signin${isLight ? 'Light' : ''}`],
-        ['page.header.signUp', '/signup', `signup${isLight ? 'Light' : ''}`],
-        ['page.header.navbar.trade', '/trading/', `trade${isLight ? 'Light' : ''}`],
+        ['page.header.signUp', 'https://rent.ongoldex.ir/loginselect', `signup${isLight ? 'Light' : ''}`],
+        // ['page.header.navbar.trade', '/trading/', `trade${isLight ? 'Light' : ''}`],
     ];
 
     return isLoggedIn ? routes : routesUnloggedIn;
