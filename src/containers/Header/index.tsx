@@ -64,27 +64,36 @@ class Head extends React.Component<Props> {
         return (
             <header className={`pg-header`}>
                 <div className={`pg-container pg-header__content ${tradingCls}`}>
-                    <div
-                        className={`pg-sidebar__toggler ${mobileWallet && 'pg-sidebar__toggler-mobile'}`}
-                        onClick={this.openSidebar}
-                    >
-                        <span className="pg-sidebar__toggler-item"/>
-                        <span className="pg-sidebar__toggler-item"/>
-                        <span className="pg-sidebar__toggler-item"/>
-                    </div>
-                    <div onClick={e => this.redirectToLanding()} className="pg-header__logo">
-                        <div className="pg-logo">
-                            <img src="/logo.png" alt="App Logo" className="pg-logo__img" />
+                    {/* --- LEFT GROUP --- */}
+                    <div className="header-left">
+                        <div
+                            className={`pg-sidebar__toggler ${mobileWallet && 'pg-sidebar__toggler-mobile'}`}
+                            onClick={this.openSidebar}
+                        >
+                            <span className="pg-sidebar__toggler-item"/>
+                            <span className="pg-sidebar__toggler-item"/>
+                            <span className="pg-sidebar__toggler-item"/>
                         </div>
-                    </div>
-                    {this.renderMarketToggler()}
-                    <div className="pg-header__location">
-                        {mobileWallet ? <span>{mobileWallet}</span> : <span>{location.pathname.split('/')[1]}</span>}
-                    </div>
-                    {this.renderMobileWalletNav()}
-                    <div className="pg-header__navbar">
-                        {this.renderMarketToolbar()}
+                        {this.renderMarketToggler()}
                         <NavBar onLinkChange={this.closeMenu}/>
+                    </div>
+
+                    {/* --- CENTER GROUP --- */}
+                    <div className="header-center">
+                        {this.renderMarketToolbar()}
+                    </div>
+
+                    {/* --- RIGHT GROUP --- */}
+                    <div className="header-right">
+                        <div className="pg-header__location">
+                            {mobileWallet ? <span>{mobileWallet}</span> : <span>{location.pathname.split('/')[1]}</span>}
+                        </div>
+                        {this.renderMobileWalletNav()}
+                        <div onClick={e => this.redirectToLanding()} className="pg-header__logo">
+                            <div className="pg-logo">
+                                <img src="/logo.png" alt="App Logo" className="pg-logo__img" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </header>

@@ -8,7 +8,7 @@ import { Link, RouteProps, withRouter } from 'react-router-dom';
 import { compose } from 'redux';
 import { languages } from '../../api/config';
 import { LogoutIcon } from '../../assets/images/sidebar/LogoutIcon';
-import { ProfileIcon } from '../../assets/images/sidebar/ProfileIcon';
+// import { ProfileIcon } from '../../assets/images/sidebar/ProfileIcon';
 import { SidebarIcons } from '../../assets/images/sidebar/SidebarIcons';
 import { pgRoutes } from '../../constants';
 import {
@@ -131,28 +131,31 @@ class SidebarContainer extends React.Component<Props, State> {
         );
     };
 
+    // public renderProfileLink = () => {
+    //     const { isLoggedIn, location } = this.props;
+    //     const handleLinkChange = () => this.props.toggleSidebar(false);
+    //     const address = location ? location.pathname : '';
+    //     const isActive = address === '/profile';
+
+    //     const iconClassName = classnames('pg-sidebar-wrapper-nav-item-img', {
+    //         'pg-sidebar-wrapper-nav-item-img--active': isActive,
+    //     });
+
+    //     return isLoggedIn && (
+    //         <div className="pg-sidebar-wrapper-profile">
+    //             <Link to="/profile" onClick={handleLinkChange} className={`${isActive && 'route-selected'}`}>
+    //                 <div className="pg-sidebar-wrapper-profile-link">
+    //                     <ProfileIcon className={iconClassName} />
+    //                     <p className="pg-sidebar-wrapper-profile-link-text">
+    //                         <FormattedMessage id={'page.header.navbar.profile'} />
+    //                     </p>
+    //                 </div>
+    //             </Link>
+    //         </div>
+    //     );
+    // };
     public renderProfileLink = () => {
-        const { isLoggedIn, location } = this.props;
-        const handleLinkChange = () => this.props.toggleSidebar(false);
-        const address = location ? location.pathname : '';
-        const isActive = address === '/profile';
-
-        const iconClassName = classnames('pg-sidebar-wrapper-nav-item-img', {
-            'pg-sidebar-wrapper-nav-item-img--active': isActive,
-        });
-
-        return isLoggedIn && (
-            <div className="pg-sidebar-wrapper-profile">
-                <Link to="/profile" onClick={handleLinkChange} className={`${isActive && 'route-selected'}`}>
-                    <div className="pg-sidebar-wrapper-profile-link">
-                        <ProfileIcon className={iconClassName} />
-                        <p className="pg-sidebar-wrapper-profile-link-text">
-                            <FormattedMessage id={'page.header.navbar.profile'} />
-                        </p>
-                    </div>
-                </Link>
-            </div>
-        );
+        return null;
     };
 
     public renderLogout = () => {
