@@ -250,3 +250,30 @@ header {
     align-items: center;
     gap: 20px; /* Add gap for consistent spacing within the right group */
 }
+
+/* Change sidebar toggler (hamburger icon) to gold */
+.pg-sidebar__toggler-item {
+  background: rgb(var(--rgb-primary-cta-color));
+}
+
+/* Change market selector text and border to gold */
+.pg-header__market-selector-toggle {
+  border-color: rgba(var(--rgb-primary-cta-color), 0.5); /* Gold border with some transparency */
+  color: rgb(var(--rgb-primary-cta-color));
+}
+
+.pg-header__market-selector-toggle svg path {
+    fill: rgb(var(--rgb-primary-cta-color));
+}
+
+/* Change sidebar toggler (hamburger icon) lines to gold */
+.pg-sidebar__toggler-item {
+  background: rgb(var(--rgb-primary-cta-color));
+}
+
+/* Change market selector text and dropdown arrow to gold */
+.pg-header__market-selector-toggle,
+.pg-header__market-selector-toggle svg path {
+  color: rgb(var(--rgb-primary-cta-color));
+  fill: rgb(var(--rgb-primary-cta-color));
+}
