@@ -399,3 +399,37 @@ input:-webkit-autofill {
     }
   }
 }
+
+/* =========================================================
+   Custom Header Contrast Overrides for Gold/Maroon Theme
+   ========================================================= */
+
+/* 1. Sidebar Toggler (Hamburger Icon) */
+.pg-sidebar__toggler-item {
+  background: rgb(var(--rgb-primary-cta-color)) !important;
+}
+
+/* 2. Market Selector */
+.pg-header__market-selector-toggle {
+  border-color: rgba(var(--rgb-primary-cta-color), 0.5) !important;
+  color: rgb(var(--rgb-primary-cta-color)) !important;
+}
+
+.pg-header__market-selector-toggle span,
+.pg-header__market-selector-toggle svg path {
+  color: rgb(var(--rgb-primary-cta-color)) !important;
+  fill: rgb(var(--rgb-primary-cta-color)) !important;
+}
+
+/* 3. Theme Switcher */
+.pg-navbar__header-settings__switcher__items {
+  border-color: rgba(var(--rgb-primary-cta-color), 0.5) !important;
+}
+
+.pg-navbar__header-settings__switcher__items .switcher-item svg path {
+  fill: rgb(var(--rgb-primary-cta-color)) !important;
+}
+
+.pg-navbar__header-settings__switcher__items .switcher-item--active {
+  background: rgba(var(--rgb-primary-cta-color), 0.2) !important;
+}
