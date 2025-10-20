@@ -41,6 +41,7 @@ export const ru: LangType = {
     'error.order.create.maxPrice': 'Цена слишком велика. Максимальная цена: {price} {currency}',
     'error.order.create.available': 'Баланс превышен. Доступно {available} {currency}',
     'error.empty.nationalId': 'Национальный ID не может быть пустым',
+    'error.market.order.insufficient_guarantee': 'Национальный ID не может быть пустым',
 
     'page.body.trade.header.marketDepths': 'Глубина рынка',
     'page.body.trade.header.marketDepths.content.price': 'Цена:',

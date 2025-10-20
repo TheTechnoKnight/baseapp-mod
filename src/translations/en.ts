@@ -701,6 +701,7 @@ export const en = {
     'error.bad_request': 'Order - bad request',
     'error.request_entity_too_large': 'Order - request entity too large',
     'error.empty.nationalId': 'National ID cannot be empty',
+    'error.market.order.insufficient_guarantee': 'Please increase your guarantee funds',
 
     // barong
     'resource.labels.private': 'Can\'t update label',

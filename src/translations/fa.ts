@@ -594,6 +594,7 @@ export const fa = {
     'error.bad_request': 'سفارش - درخواست بد',
     'error.request_entity_too_large': 'سفارش - موجودیت درخواست بسیار بزرگ است',
     'error.empty.nationalId': 'کد ملی نمیتواند خالی باشد',
+    'error.market.order.insufficient_guarantee': 'لطفا وجه تضمین خود را افزایش دهید',
     'resource.labels.private': 'نمی‌توان برچسب را به‌روزرسانی کرد',
     'resource.user.no_activity': 'فعالیتی ثبت نشده یا موضوع اشتباه است',
     'resource.profile.not_exist': 'کاربر پروفایل ندارد',
